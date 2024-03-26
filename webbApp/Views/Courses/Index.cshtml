@@ -1,0 +1,15 @@
+﻿@using Infrastructure.Entities
+@model IEnumerable<CourseEntity>
+
+@{
+    ViewData["Title"] = "Home";
+}
+
+<a asp-action="Create" asp-controller="Courses">New course</a>
+<br />
+<hr />
+<br />
+@foreach (var course in Model)
+{
+    <div>@course.Title</div>
+}

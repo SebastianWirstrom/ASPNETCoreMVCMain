@@ -1,0 +1,39 @@
+﻿@using webbApp.ViewModels.Courses
+@model CoursesRegistrationViewModel
+
+<form asp-action="Create" asp-controller="Courses" method="post">
+    <div>
+        <label asp-for="Title"></label>
+        <input asp-for="Title" />
+    </div>
+    <div>
+        <label asp-for="Price"></label>
+        <input asp-for="Price" />
+    </div>
+    <div>
+        <label asp-for="DiscountPrice"></label>
+        <input asp-for="DiscountPrice" />
+    </div>
+    <div>
+        <label asp-for="LikesInNumbers"></label>
+        <input asp-for="LikesInNumbers" />
+    </div>
+    <div>
+        <label asp-for="LikesInPercent"></label>
+        <input asp-for="LikesInPercent" />
+    </div>
+    <div>
+        <label asp-for="Hours"></label>
+        <input asp-for="Hours" />
+    </div>
+    <div>
+        <label asp-for="Author"></label>
+        <input asp-for="Author" />
+    </div>
+    <div>
+        <label asp-for="IsBestSeller"></label>
+        <input asp-for="IsBestSeller" />
+    </div>
+
+    <button type="submit">CREATE</button>
+</form>

@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Infrastructure.Entities;
+using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using webbapp.ViewModels.Sections;
 using webbApp.ViewModels.Sections;
 using webbApp.ViewModels.Views;
@@ -88,8 +90,23 @@ public class DefaultController : Controller
         };
         
         return View(viewModel);
-    } 
-    
+    }
+
+
+    //ska vara kvar? kolla igen
+    [Route("/details")]
+    public async Task<IActionResult> Details()
+    {
+        using var http = new HttpClient();
+        var response = await http.GetAsync("https://localhost:7267/api/courses/1");
+        var json = await response.Content.ReadAsStringAsync();
+        var data = JsonConvert.DeserializeObject<CourseEntity>(json);
+
+        return View(data);
+    }
+
     [Route("/error")]
     public IActionResult Error404(int statusCode) => View();
+
+
 }
