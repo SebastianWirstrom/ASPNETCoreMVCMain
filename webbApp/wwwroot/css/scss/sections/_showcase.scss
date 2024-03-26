@@ -1,0 +1,70 @@
+.showcase {
+    position: relative;
+    margin-bottom: 80px;
+
+    @include lg {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 0;
+    }
+
+    img {
+        position: relative;
+        width: 100%;
+        z-index: -1;
+
+       @include lg {
+        width: 45%;
+
+       }
+        
+    }
+    .container {
+        height: 100%;
+
+        @include lg {
+            position: absolute;
+            left: 0;
+            right: 0;
+        }
+
+        .content {
+            margin-top: 0;
+            width: 100%;
+            text-align: center;
+
+            h1 {
+                margin-right: 150px;
+            }
+            
+            p {
+                margin-top: 20px;
+                margin-bottom: 40px;
+            }
+
+            @include lg {
+                margin-top: 100px;
+                width: 40%;
+                text-align: left;
+            }
+
+            h6 {
+               margin-top: 140px;
+               margin-bottom: 30px;
+            }
+
+            .showcase-logos {
+                display: flex;
+
+                img {
+                    
+                    @include lg {
+                        margin-right: 20px;
+                        width: 24%;
+                    }
+                }
+            }
+            
+        }
+    }    
+}

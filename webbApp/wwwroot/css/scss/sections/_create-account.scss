@@ -1,0 +1,97 @@
+.create-account {
+    .container {
+        .title-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            align-items: center;
+            
+            .subtitle-box {
+                display: flex;
+                gap: 5px;
+            }
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            grid-template-areas: 
+            "l-first l-last"
+            "first last"
+            "l-email l-email"            
+            "email email"
+            "l-password l-password"                    
+            "password password"
+            "l-cpass l-cpass"                  
+            "cpass cpass"
+            "tos tos"
+            "button button";
+
+            padding: 20px 400px 20px 400px;
+            justify-content: center;
+            align-items: center;
+
+            input {
+                margin-bottom: 20px;
+            }
+
+            label {
+                color: $gray-900;
+                font-weight: 500;
+            }
+            
+            .first {
+                grid-area: first;
+                margin-right: 10px;
+            }
+                    
+            .last {
+                grid-area: last;
+            }
+                    
+            .email {
+                grid-area: email;
+            }
+                    
+            .password {
+                grid-area: password;
+            }
+                    
+            .cpass {
+                grid-area: cpass;
+            }
+
+            label[for="first-name"] {
+                grid-area: l-first;
+            }
+            label[for="last-name"] {
+                grid-area: l-last;
+            }
+            label[for="email"] {
+                grid-area: l-email;
+            }
+            label[for="password"] {
+                grid-area: l-password;
+            }
+            label[for="confirm-password"] {
+                grid-area: l-cpass;
+            }
+
+            .btn-theme-s {
+                
+                grid-area: button;
+            }
+
+            .ToS {
+                display: flex;
+                grid-area: tos;
+                gap: 5px;
+                
+                p {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}

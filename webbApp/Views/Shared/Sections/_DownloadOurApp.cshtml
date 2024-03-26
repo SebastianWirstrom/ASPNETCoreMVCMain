@@ -1,0 +1,29 @@
+﻿@model DownloadOurAppViewModel
+
+<section class="download-our-app">
+    <div class="container">
+        <div class="img-box">
+            <img class="phone-bottom" src="@Url.Content(Model.MainImageBottom.ImageUrl)" alt="@Model.MainImageBottom.AltText"/>
+            <img class="phone-top" src="@Url.Content(Model.MainImageTop.ImageUrl)" alt="@Model.MainImageTop.AltText"/>
+        </div>
+        <div class="text-box">
+            <h1>Download Our App For Any Devices:</h1>
+            <p class="store-text">App Store</p>
+            <div class="store-box">
+                <div class="text-link-box">
+                    <h4>Editor's Choice</h4>
+                    <p class="rating-text">rating 4.7, 187K+ reviews</p>
+                </div>
+                <a href="/reviews-apple"><img src="/images/download-our-app/appstore-badge.svg" alt="Apple app store link"></a>
+            </div>
+            <p class="store-text">Google Play</p>
+            <div class="store-box">
+                <div class="text-link-box">
+                    <h4>App of the Day</h4>
+                    <p class="rating-text">rating 4.8, 30K+ reviews</p>
+                </div>
+                <a href="/reviews-apple"><img src="/images/download-our-app/google-play-badge.svg" alt="Apple app store link"></a>
+            </div>
+        </div>
+    </div>
+</section>

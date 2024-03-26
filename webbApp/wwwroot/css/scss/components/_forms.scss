@@ -1,0 +1,46 @@
+form {
+    width: 100%;
+    display: grid;
+
+    .input-group {
+        display: grid;
+    }
+
+    .checkbox-group {
+        input[type = checkbox] {
+            margin-right: 10px;
+        }
+
+        .input-group {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    input {
+        padding: 15px;
+        border-radius: 8px !important;
+        border: 1px solid $gray-400;
+
+        &::placeholder {
+            opacity: 0.4;
+        }
+    }
+
+    input[type=checkbox] {
+        height: 20px;
+        width: 20px;
+        margin: 0;
+    }
+
+    .btn-theme-s {
+        width: 100%;
+    }
+
+    .field-validation-error {
+        font-size: 14px;
+        color: $danger;
+        font-weight: 500 !important;
+        padding: 2px 5px;
+    }
+}

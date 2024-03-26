@@ -1,0 +1,21 @@
+﻿@model TopWorkToolsViewModel
+<section class="top-work-tools">
+    <div class="container">
+        <div class="title">
+            <h1>@Model.Title</h1>
+            <p>@Model.Text</p>
+        </div>
+        <div class="tools-boxes">      
+            @if (Model.Tools != null)
+            {
+                foreach (var box in Model.Tools)
+                {
+                    <div class="tools-box">
+                        <img src="@box.ImageUrl" alt="box.AltText">
+                        <p>@box.BoxText</p>
+                    </div>
+                }
+            }  
+        </div>
+    </div>
+</section>

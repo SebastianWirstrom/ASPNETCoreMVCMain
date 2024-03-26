@@ -1,0 +1,23 @@
+﻿@model DefaultIndexViewModel
+
+<div id="showcase">
+    @await Html.PartialAsync("~/Views/Shared/Sections/_Showcase.cshtml", Model.Showcase)
+</div>
+<div id="features">
+    @await Html.PartialAsync("~/Views/Shared/Sections/_Features.cshtml", Model.Features)
+</div>
+<div id="switch-between">
+    @await Html.PartialAsync("~/Views/Shared/Sections/_SwitchBetween.cshtml", Model.SwitchBetween)
+</div>
+<div id="manage-your-work">
+    @await Html.PartialAsync("~/Views/Shared/Sections/_ManageYourWork.cshtml", Model.ManageYourWork)
+</div>
+<div id="download-our-app">
+    @await Html.PartialAsync("/Views/Shared/Sections/_DownLoadOurApp.cshtml", Model.DownloadOurApp)
+</div>
+<div id="top-work-tools">
+    @await Html.PartialAsync("~/Views/Shared/Sections/_TopWorkTools.cshtml", Model.TopWorkTools)
+</div>
+<div id="newsletter">
+    @await Html.PartialAsync("~/Views/Shared/Sections/_Newsletter.cshtml", Model.Newsletter)
+</div>

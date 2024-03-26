@@ -1,0 +1,140 @@
+﻿.container {
+    h5 {
+        color: $theme;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    #account-details {
+        display: flex;
+        flex-direction: row;
+        column-gap: 20px;
+
+
+        aside {
+            .profile-info {
+                width: 280px;
+                text-align: center;
+
+                img {
+                    margin-top: 40px;
+                    margin-bottom: 15px;
+                }
+            }
+
+            nav {
+                display: flex;
+                flex-direction: column;
+
+                a {
+                    display: block;
+                    text-align: left;
+                    width: 100%;
+                    padding: 10px;
+                }
+
+                i {
+                    margin-right: 8px;
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+        .vl {
+            border-left: 1px solid #d1d1d1;
+        }
+
+        .details {
+            margin-left: 80px;
+            width: 60%;
+            justify-content: center;
+            align-items: center;
+
+            .basic-info-form {
+                .content {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-areas: "first last" "email phone" "bio bio";
+                    gap: 15px;
+
+                    .input-group {
+                        margin-top: 10px;
+
+                        textarea {
+                            padding: 15px;
+                            border-radius: 8px !important;
+                            border: 1px solid $gray-400;
+
+                            &::placeholder {
+                                opacity: 0.4;
+                            }
+                        }
+                    }
+
+                    #form-firstname {
+                        grid-area: first;
+                    }
+
+                    #form-lastname {
+                        grid-area: last;
+                    }
+
+                    #form-email {
+                        grid-area: email;
+                    }
+
+                    #form-phone {
+                        grid-area: phone;
+                    }
+
+                    #form-bio {
+                        margin-top: 0;
+                        grid-area: bio;
+                    }
+
+                    .form-buttons {
+                        display: flex;
+                        column-gap: 15px;
+                        margin-top: 20px;
+                        margin-bottom: 25px;
+                    }
+                }
+            }
+
+            .address-info-form {
+                .content {
+                    gap: 15px;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-areas: "line1 line1" "line2 line2" "postal city";
+
+                    #form-addressline-1 {
+                        grid-area: line1;
+                    }
+
+                    #form-addressline-2 {
+                        grid-area: line2;
+                    }
+
+                    #form-postal-code {
+                        grid-area: postal;
+                    }
+
+                    #form-city {
+                        grid-area: city;
+                    }
+
+                    .form-buttons {
+                        display: flex;
+                        column-gap: 15px;
+                        margin-top: 20px;
+                        margin-bottom: 50px;
+                    }
+                }
+            }
+        }
+    }
+}

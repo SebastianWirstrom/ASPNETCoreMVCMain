@@ -1,0 +1,27 @@
+.top-work-tools {
+    padding-bottom: 80px;
+    .container {
+        .title {
+            text-align: center;
+            padding: 50px 280px 50px 280px;
+            h1 {
+                margin-top: 60px;
+                margin-bottom: 20px;
+            }
+            p {
+                margin-bottom: 30px;
+            }
+        }
+        .tools-boxes {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 80px;
+            .tools-box {
+                img {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,78 @@
+.newsletter {
+    background-color: $gray-100;
+    padding: 80px 0 80px 0;
+    .container {
+        .title {
+            display: flex;
+            justify-content: center;
+            column-gap: 20px;
+            
+        }
+        .check-boxes {
+            display: grid;
+            justify-content: center;
+            grid-template-areas: "subtitle box box box"
+                                 "subtitle box box box";
+            
+            margin-top: 30px;
+            margin-bottom: 50px;
+            
+            .subtitle {
+                grid-area: "subtitle";
+                padding: 10px 40px 0px 40px;
+            }
+            .boxes {
+                display: grid;
+                grid-area: "box";
+                grid-template-columns: 1fr 1fr 1fr;
+
+                row-gap: 5px;
+                column-gap: 80px;
+
+                .check-boxes-and-text {
+                    margin-left: 15px;
+                    input {
+                       width: 16px;
+                       height: 16px; 
+                       margin-right: 3px;
+                    }
+                }
+            }
+        }
+        .newsletter-bar {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            column-gap: 20px;
+        
+            .input-icon-wrapper {
+                position: relative;
+                display: flex;
+                align-items: center;
+        
+                .fa-envelope {
+                    position: absolute;
+                    left: 30px;
+                    
+                }
+                .text {
+                    padding: 10px 25px;
+                    width: 830px;
+                    margin-left: 20px;
+                    border-radius: 5px;
+                    border: 1px solid $gray-500;
+                }
+            }
+            .btn-theme {
+                padding: 10px 25px;
+            }
+        }
+        .tos {
+            display: flex;
+            justify-content: left;
+            margin-top: 10px;
+            margin-left: 175px;
+            column-gap: 4px;
+        }
+    }
+}

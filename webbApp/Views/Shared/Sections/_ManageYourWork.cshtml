@@ -1,0 +1,34 @@
+﻿
+@model ManageYourWorkViewModel
+
+<section class="manage-your-work">
+    <div class="container">
+        <div class="img-box">
+            <img src="@Url.Content(Model.Image.ImageUrl) " alt="@Model.Image.AltText">
+        </div>
+        <div class="text-box">
+            <h2>Manage Your Work</h2>
+            <div class="p-box">
+                <i class="fa-sharp fa-solid fa-check"></i>
+                <p>@Model.Text1</p>
+            </div>
+            <div class="p-box">
+                <i class="fa-sharp fa-solid fa-check"></i>
+                <p>@Model.Text2</p>
+            </div>
+            <div class="p-box">
+                <i class="fa-sharp fa-solid fa-check"></i>
+                <p>@Model.Text3</p>
+            </div>
+            <div class="p-box">
+                <i class="fa-sharp fa-solid fa-check"></i>
+                <p>@Model.Text4</p>
+            </div>
+            <div class="p-box">
+                <i class="fa-sharp fa-solid fa-check"></i>
+                <p>@Model.Text5</p>
+            </div>
+            <a class="btn-theme-s" asp-controller="@Model.Link.ControllerName" asp-action="@Model.Link.ActionName">@Model.Link.Text<i class="fa-regular fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>

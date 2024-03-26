@@ -1,0 +1,62 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="compilerconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="compilerconfig.json" />
+    <None Include="wwwroot\images\download-our-app\appstore-badge.svg" />
+    <None Include="wwwroot\images\download-our-app\google-play-badge.svg" />
+    <None Include="wwwroot\images\download-our-app\phone-bottom.svg" />
+    <None Include="wwwroot\images\download-our-app\phone-top.svg" />
+    <None Include="wwwroot\images\features\features-icon-1.svg" />
+    <None Include="wwwroot\images\features\features-icon-2.svg" />
+    <None Include="wwwroot\images\features\features-icon-3.svg" />
+    <None Include="wwwroot\images\features\features-icon-4.svg" />
+    <None Include="wwwroot\images\features\features-icon-5.svg" />
+    <None Include="wwwroot\images\features\features-icon-6.svg" />
+    <None Include="wwwroot\images\footer\social-btn-1.svg" />
+    <None Include="wwwroot\images\footer\social-btn-2.svg" />
+    <None Include="wwwroot\images\footer\social-btn-3.svg" />
+    <None Include="wwwroot\images\footer\social-btn-4.svg" />
+    <None Include="wwwroot\images\manage-your-work\manage-your-work.svg" />
+    <None Include="wwwroot\images\newsletter\newsletter-arrow.svg" />
+    <None Include="wwwroot\images\showcase\sc-logo1.svg" />
+    <None Include="wwwroot\images\showcase\sc-logo2.svg" />
+    <None Include="wwwroot\images\showcase\sc-logo3.svg" />
+    <None Include="wwwroot\images\showcase\sc-logo4.svg" />
+    <None Include="wwwroot\images\showcase\showcase-image.svg" />
+    <None Include="wwwroot\images\switch-between\mockup.svg" />
+    <None Include="wwwroot\images\top-work-tools\tools-icon-dropbox.svg" />
+    <None Include="wwwroot\images\top-work-tools\tools-icon-evernote.svg" />
+    <None Include="wwwroot\images\top-work-tools\tools-icon-google.svg" />
+    <None Include="wwwroot\images\top-work-tools\tools-icon-mail.svg" />
+    <None Include="wwwroot\images\top-work-tools\tools-icon-MailChimp.svg" />
+    <None Include="wwwroot\images\top-work-tools\tools-icon-slack.svg" />
+    <None Include="wwwroot\images\top-work-tools\tools-icon-trello.svg" />
+    <None Include="wwwroot\images\top-work-tools\tools-icon-zoom.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="microsoft.entityframeworkcore.design" Version="8.0.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\Shared\Partials\" />
+  </ItemGroup>
+
+</Project>

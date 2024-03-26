@@ -1,0 +1,19 @@
+.error-404 {
+    .container {
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .img-404 {
+                width: 40%;
+                height: auto;
+            }
+        }
+        nav {
+            button {
+                width: 40%;
+            }
+        }
+    }
+}

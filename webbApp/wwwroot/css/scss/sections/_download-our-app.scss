@@ -1,0 +1,57 @@
+.download-our-app {
+    padding-top: 80px;
+    padding-bottom: 100px;
+    background-color: $gray-200;
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        .img-box {
+            position: relative;
+            top: 0;
+            left: 0;
+            .phone-bottom {
+                position: relative;
+                top: 50px;
+                left: 100px;   
+            }
+            .phone-top {
+                position: absolute;
+                top: 10px;
+                box-shadow: -25px 25px 30px 10px rgba(90, 90, 90, 0.3);
+                border-radius: 25px;
+            }
+        }
+        .text-box {
+            h1 {
+                padding: 50px;
+                margin-right: 150px;
+            }
+            .store-text {
+                margin-left: 50px;
+            }
+
+            .store-box {
+                display: flex;
+                flex-direction: row;
+                margin-left: 50px;
+                .text-link-box {
+                    h4 {
+
+                    }
+                    .rating-text {
+                        margin-bottom: 50px;
+                    }
+                }
+                a {
+                    margin-left: 90px;
+                   img {
+                        margin-top: 5px;
+                        width: 200px;
+                        height: auto;
+                   }
+                }
+            }
+        }
+    }
+}

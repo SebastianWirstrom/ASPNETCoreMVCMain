@@ -1,0 +1,37 @@
+.manage-your-work {
+    margin-top: 100px;
+    .container {
+        display: grid;
+        grid-template-columns: auto auto;
+        
+        .img-box {
+
+        }
+        .text-box {
+            
+            h2 {
+                margin-top: 80px;
+                margin-bottom: 30px;
+            }
+            .p-box {
+                display: flex; 
+                justify-content: left;
+                align-items: center;
+                i {
+                    color: $theme;
+                    border: 2px solid $theme;
+                    border-radius: 25px;
+                    padding: 2px 3px;
+                } 
+                p {
+                    
+                    margin-top: 15px;
+                    margin-left: 8px;
+                }
+            }
+            .btn-theme-s {
+                margin-top: 30px;
+            }
+        }
+    }
+}

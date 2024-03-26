@@ -1,0 +1,40 @@
+.features {
+    padding: 80px;
+    background-color: $gray-100;
+    
+
+    .title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            margin-top: 15px;
+        }
+    }
+    
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        
+        
+        
+        .features-box {
+            text-align: center;
+            border: 1px solid $gray-300;
+            transition: all 0.2s ease-in-out;
+            gap: 10px;
+
+            &:hover {
+                background-color: $white;
+                border-radius: 25px;
+            }
+
+            img {
+                margin-top: 70px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}

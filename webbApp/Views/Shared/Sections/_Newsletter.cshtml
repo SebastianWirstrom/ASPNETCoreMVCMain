@@ -1,0 +1,67 @@
+﻿@model NewsletterViewModel
+
+<section class="newsletter">
+    <div class="container">
+        <div class="title">
+            <h1>@Model.Title</h1>
+            <img src="@Url.Content(Model.Image.ImageUrl)" alt="@Model.Image.AltText">
+        </div>
+        <div class="check-boxes">
+            <div class="subtitle">
+                <h5>Sign up for Newsletters</h5>
+            </div>
+            <div class="boxes">
+                <div class="check-boxes-and-text">
+                    <label>
+                        <input type="checkbox"> Daily Newsletter
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="check-boxes-and-text">
+                    <label>
+                        <input type="checkbox"> Advertising Updates
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="check-boxes-and-text">
+                    <label>
+                        <input type="checkbox"> Week in Review
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="check-boxes-and-text">
+                    <label>
+                        <input type="checkbox"> Event Updates
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="check-boxes-and-text">
+                    <label>
+                        <input type="checkbox"> Startups Weekly
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="check-boxes-and-text">
+                    <label>
+                        <input type="checkbox"> Podcasts
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="newsletter-bar">
+            <div class="input-icon-wrapper">
+                <i class="fa-sharp fa-regular fa-envelope"></i>
+                <input class="text" type="text" placeholder=" Your Email" name="email">
+            </div>
+            <a class="btn-theme" asp-controller="@Model.Link.ControllerName" asp-action="@Model.Link.ActionName">@Model.Link.Text</a>
+        </div>
+
+        <div class="tos">
+            <p>* Yes, I agree to the </p>
+            <a asp-controller="@Model.LinkTerms.ControllerName" asp-action="@Model.LinkTerms.ActionName">@Model.LinkTerms.Text</a>
+            <p>and </p>
+            <a asp-controller="@Model.LinkPrivacy.ControllerName" asp-action="@Model.LinkPrivacy.ActionName">@Model.LinkPrivacy.Text</a>
+        </div>
+    </div>
+</section>
