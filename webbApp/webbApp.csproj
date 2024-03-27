@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\Shared\Partials\**" />
+    <Content Remove="Views\Shared\Partials\**" />
+    <EmbeddedResource Remove="Views\Shared\Partials\**" />
+    <None Remove="Views\Shared\Partials\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Remove="compilerconfig.json" />
   </ItemGroup>
 
@@ -54,10 +61,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Views\Shared\Partials\" />
   </ItemGroup>
 
 </Project>

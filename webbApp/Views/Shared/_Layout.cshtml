@@ -42,7 +42,7 @@
                 @if (_signInManager.IsSignedIn(User))
                 {
                     <a asp-controller="Auth" asp-action="SignOut" class="btn-gray"><i class="fa-sharp fa-regular fa-arrow-right-from-bracket"></i>Sign Out</a>
-                    
+                    <a asp-controller="Account" asp-action="Details" class="btn-gray">My Account</a>
                 }
                 else
                 {

@@ -87,7 +87,6 @@ public class AuthController(UserManager<UserEntity> userManager, SignInManager<U
                 return RedirectToAction("Details", "Account");
             }
         }
-
         ModelState.AddModelError("IncorrectValues", "Incorrect E-mail or password");
         ViewData["ErrorMessage"] = "Incorrect E-mail or password";
         return View(model);
