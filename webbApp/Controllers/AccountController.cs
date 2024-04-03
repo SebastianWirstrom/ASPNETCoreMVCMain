@@ -8,11 +8,12 @@ using webbApp.ViewModels.Account;
 namespace webbApp.Controllers;
 
 [Authorize]
-public class AccountController(UserManager<UserEntity> userManager, AddressManager addressManager) : Controller
+public class AccountController(UserManager<UserEntity> userManager, AddressManager addressManager, AccountManager accountManager) : Controller
 {
     private readonly UserManager<UserEntity> _userManager = userManager;
     private readonly AddressManager _addressManager = addressManager;
-
+    private readonly AccountManager _accountManager = accountManager;
+    
 
 
     #region [HTTPGET] Details
@@ -97,7 +98,7 @@ public class AccountController(UserManager<UserEntity> userManager, AddressManag
                             ModelState.AddModelError("IncorrectValues", "Something went wrong! Unable to save data");
                             ViewData["ErrorMessage"] = "Something went wrong! Unable to update address information";
                         }
-                    }  
+                    }
                 }
             }
         }
@@ -116,11 +117,11 @@ public class AccountController(UserManager<UserEntity> userManager, AddressManag
 
         return new ProfileInfoViewModel
         {
-            
+
             FirstName = user!.FirstName,
-            LastName = user.LastName,
+            LastName = user!.LastName,
             Email = user.Email!,
-           
+
         };
     }
 
@@ -146,7 +147,7 @@ public class AccountController(UserManager<UserEntity> userManager, AddressManag
         {
             var address = await _addressManager.GetAddressAsync(user.Id);
             if (address != null)
-            {            
+            {
                 return new AccountDetailsAddressInfoViewModel
                 {
                     AddressLine_1 = address.AddressLine_1,
@@ -156,11 +157,22 @@ public class AccountController(UserManager<UserEntity> userManager, AddressManag
                 };
             }
             else
-            {     
+            {
                 return new AccountDetailsAddressInfoViewModel();
             }
-        }    
+        }
         return new AccountDetailsAddressInfoViewModel();
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> UploadImage(IFormFile file)
+    {
+        var result = await _accountManager.UploadUserProfileImageAsync(User, file);
+
+        //Lägg till felmeddelande/successmeddelande
+
+
+        return RedirectToAction("Details", "Account");
     }
 }
 

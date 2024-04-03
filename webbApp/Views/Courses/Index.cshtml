@@ -11,5 +11,16 @@
 <br />
 @foreach (var course in Model)
 {
-    <div>@course.Title</div>
+    <div class="course">
+        <img src="@Url.Content($"~{course.ImagePath}")" alt="Image for @course.Title"/>
+        <p id="course-isbestseller">@course.IsBestSeller</p>
+        <h5>@course.Title</h5>
+        <p id="course-author">@course.Author</p>
+        <p id="course-price"></p>
+        <br />
+        <p id="course-hours">@course.Hours</p>
+        <p id="course-likesinnumbers">@course.LikesInNumbers</p>
+        <p id="course-likesinpercent">@course.LikesInPercent</p>
+    </div>
+    
 }
