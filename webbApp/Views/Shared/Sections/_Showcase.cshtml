@@ -1,23 +1,19 @@
 ﻿@model ShowcaseViewModel
 
 <section class="showcase">
-    <img src="/images/showcase/showcase-image.svg" alt="showcase image" class="@Model.ShowcaseImage.ImageUrl" alt="@Model.ShowcaseImage.AltText">
+    <img src="/images/showcase/showcase-image.svg"/>
     <div class="container">
         <div class="content">
-            <h1>@Model.Title</h1>
-            <p>@Model.Text</p>
-            <a class="btn-theme-s" asp-controller="@Model.Link.ControllerName" asp-action="@Model.Link.ActionName">@Model.Link.Text</a>
-            <h6>@Model.BrandsText</h6>
-            <div class="showcase-logos">
-                @if (Model.Brands != null)
-                {
-                    foreach (var brand in Model.Brands)
-                    {
-                        <img src="@brand.ImageUrl" alt="brand.AltText">
-                    }
-                }
+            <h1>Task Management Assistant You Gonna Love</h1>
+            <p>We offer you a new generation of task management system. Plan, manage & track all your tasks in one flexible tool.</p>
+            <a class="btn-theme-s" asp-controller="" asp-action="">Get started for free</a>
+            <h6>Largest companies use our tool to work efficiently</h6>
+            <div class="showcase-logos">       
+                <img src="~/images/showcase/sc-logo1.svg"/>
+                <img src="~/images/showcase/sc-logo2.svg" />
+                <img src="~/images/showcase/sc-logo3.svg"/>
+                <img src="~/images/showcase/sc-logo4.svg" />
             </div>
-
         </div>
     </div>
 </section>

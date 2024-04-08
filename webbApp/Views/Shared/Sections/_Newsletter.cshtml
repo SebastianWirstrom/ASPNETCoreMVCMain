@@ -1,67 +1,69 @@
-﻿@model NewsletterViewModel
+﻿@model SubscribeViewModel
 
-<section class="newsletter">
+<section id="subscribe" class="subscribe">
     <div class="container">
         <div class="title">
-            <h1>@Model.Title</h1>
-            <img src="@Url.Content(Model.Image.ImageUrl)" alt="@Model.Image.AltText">
+            <h2>Don't Want to Miss Anything?</h2>
+            <img src="~/images/newsletter/newsletter-arrow.svg" alt="swirl arrow" />
         </div>
-        <div class="check-boxes">
-            <div class="subtitle">
-                <h5>Sign up for Newsletters</h5>
+        <form method="post" asp-action="Subscribe" asp-controller="Default">
+            <div class="alternative">
+                <h4>Sign up for newsletters</h4>
+                <div class="options">
+                    <div class="checkbox-group">
+                        <div class="input-group">
+                            <input asp-for="DailyNewsletter" />
+                            <label asp-for="DailyNewsletter"></label>
+                        </div>
+                    </div>
+                    <div class="checkbox-group">
+                        <div class="input-group">
+                            <input asp-for="AdvertisingUpdates" />
+                            <label asp-for="AdvertisingUpdates"></label>
+                        </div>
+                    </div>
+                    <div class="checkbox-group">
+                        <div class="input-group">
+                            <input asp-for="WeekinReview" />
+                            <label asp-for="WeekinReview"></label>
+                        </div>
+                    </div>
+                    <div class="checkbox-group">
+                        <div class="input-group">
+                            <input asp-for="EventUpdates" />
+                            <label asp-for="EventUpdates"></label>
+                        </div>
+                    </div>
+                    <div class="checkbox-group">
+                        <div class="input-group">
+                            <input asp-for="StartupsWeekly" />
+                            <label asp-for="StartupsWeekly"></label>
+                        </div>
+                    </div>
+                    <div class="checkbox-group">
+                        <div class="input-group">
+                            <input asp-for="Podcasts" />
+                            <label asp-for="Podcasts"></label>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="boxes">
-                <div class="check-boxes-and-text">
-                    <label>
-                        <input type="checkbox"> Daily Newsletter
-                        <span class="checkmark"></span>
-                    </label>
-                </div>
-                <div class="check-boxes-and-text">
-                    <label>
-                        <input type="checkbox"> Advertising Updates
-                        <span class="checkmark"></span>
-                    </label>
-                </div>
-                <div class="check-boxes-and-text">
-                    <label>
-                        <input type="checkbox"> Week in Review
-                        <span class="checkmark"></span>
-                    </label>
-                </div>
-                <div class="check-boxes-and-text">
-                    <label>
-                        <input type="checkbox"> Event Updates
-                        <span class="checkmark"></span>
-                    </label>
-                </div>
-                <div class="check-boxes-and-text">
-                    <label>
-                        <input type="checkbox"> Startups Weekly
-                        <span class="checkmark"></span>
-                    </label>
-                </div>
-                <div class="check-boxes-and-text">
-                    <label>
-                        <input type="checkbox"> Podcasts
-                        <span class="checkmark"></span>
-                    </label>
-                </div>
-            </div>
-        </div>
-        <div class="newsletter-bar">
-            <div class="input-icon-wrapper">
-                <i class="fa-sharp fa-regular fa-envelope"></i>
-                <input class="text" type="text" placeholder=" Your Email" name="email">
-            </div>
-            <a class="btn-theme" asp-controller="@Model.Link.ControllerName" asp-action="@Model.Link.ActionName">@Model.Link.Text</a>
-        </div>
 
-        <div class="tos">
-            <p>* Yes, I agree to the </p>
-            <a asp-controller="@Model.LinkTerms.ControllerName" asp-action="@Model.LinkTerms.ActionName">@Model.LinkTerms.Text</a>
-            <p>and </p>
-            <a asp-controller="@Model.LinkPrivacy.ControllerName" asp-action="@Model.LinkPrivacy.ActionName">@Model.LinkPrivacy.Text</a>
-        </div>
+            <div class="form-email">
+                <div class="input-group">
+                    <i class="fa-regular fa-envelope"></i>
+                    <input asp-for="Email" />
+                </div>
+                <button type="submit" class="btn btn-theme">Subscribe *</button>
+            </div>
+            @if (!string.IsNullOrEmpty(TempData["StatusMessage"]?.ToString()))
+            {
+                <span class="status-message">@TempData["StatusMessage"]</span>
+            }
+            else
+            {
+                <span class="status-message">* Yes, I agree to the terms and privacy policy</span>
+            }
+        </form>
     </div>
 </section>
