@@ -1,0 +1,35 @@
+.courses {
+    .container {
+        h1 {
+
+        }
+
+        #form-filters {
+
+        }
+
+        .input-search-group {
+
+        }
+        
+        .course-items {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+
+            .content {
+                .title {
+                    color: $gray-900;
+                }
+                .author {
+                    color: $gray-900;
+                }
+                .pricing {
+                    .discount {
+                        color: $danger;
+                    }
+                }
+            }
+        }
+    }
+}

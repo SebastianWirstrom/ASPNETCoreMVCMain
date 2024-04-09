@@ -1038,3 +1038,18 @@ footer .container .social-media {
   margin-top: 20px;
   margin-bottom: 50px;
 }
+
+.courses .container .course-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+.courses .container .course-items .content .title {
+  color: #0B0F19;
+}
+.courses .container .course-items .content .author {
+  color: #0B0F19;
+}
+.courses .container .course-items .content .pricing .discount {
+  color: #EF4444;
+}
