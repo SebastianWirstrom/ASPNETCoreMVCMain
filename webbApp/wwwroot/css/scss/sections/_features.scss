@@ -17,14 +17,16 @@
     .container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        
-        
-        
+
         .features-box {
             text-align: center;
             border: 1px solid $gray-300;
             transition: all 0.2s ease-in-out;
             gap: 10px;
+
+            h5 {
+                color: $gray-900;
+            }
 
             &:hover {
                 background-color: $white;
@@ -33,7 +35,8 @@
 
             img {
                 margin-top: 70px;
-                margin-bottom: 30px;
+                
+                
             }
         }
     }

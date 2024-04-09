@@ -3,12 +3,12 @@
 <section id="subscribe" class="subscribe">
     <div class="container">
         <div class="title">
-            <h2>Don't Want to Miss Anything?</h2>
+            <h1>Don't Want to Miss Anything?</h1>
             <img src="~/images/newsletter/newsletter-arrow.svg" alt="swirl arrow" />
         </div>
-        <form method="post" asp-action="Subscribe" asp-controller="Default">
+        <form class="newsletter-form" method="post" asp-action="Subscribe" asp-controller="Default">
             <div class="alternative">
-                <h4>Sign up for newsletters</h4>
+                <h4>Sign up for<br /> newsletters</h4>
                 <div class="options">
                     <div class="checkbox-group">
                         <div class="input-group">
@@ -54,7 +54,7 @@
                     <i class="fa-regular fa-envelope"></i>
                     <input asp-for="Email" />
                 </div>
-                <button type="submit" class="btn btn-theme">Subscribe *</button>
+                <button type="submit" class="btn-theme">Subscribe*</button>
             </div>
             @if (!string.IsNullOrEmpty(TempData["StatusMessage"]?.ToString()))
             {

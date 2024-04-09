@@ -588,13 +588,15 @@ footer .container .social-media {
   transition: all 0.2s ease-in-out;
   gap: 10px;
 }
+.features .container .features-box h5 {
+  color: #0B0F19;
+}
 .features .container .features-box:hover {
   background-color: #FFFFFF;
   border-radius: 25px;
 }
 .features .container .features-box img {
   margin-top: 70px;
-  margin-bottom: 30px;
 }
 
 .switch-between {
@@ -726,72 +728,84 @@ footer .container .social-media {
   margin-bottom: 20px;
 }
 
-.newsletter {
+#newsletter {
   background-color: #F3F6FF;
   padding: 80px 0 80px 0;
 }
-.newsletter .container .title {
+#newsletter .subscribe .container {
+  max-width: 1100px;
+  margin: auto;
+  padding-left: 100px;
   display: flex;
-  justify-content: center;
-  column-gap: 20px;
-}
-.newsletter .container .check-boxes {
-  display: grid;
-  justify-content: center;
-  grid-template-areas: "subtitle box box box" "subtitle box box box";
-  margin-top: 30px;
-  margin-bottom: 50px;
-}
-.newsletter .container .check-boxes .subtitle {
-  grid-area: "subtitle";
-  padding: 10px 40px 0px 40px;
-}
-.newsletter .container .check-boxes .boxes {
-  display: grid;
-  grid-area: "box";
-  grid-template-columns: 1fr 1fr 1fr;
-  row-gap: 5px;
-  column-gap: 80px;
-}
-.newsletter .container .check-boxes .boxes .check-boxes-and-text {
-  margin-left: 15px;
-}
-.newsletter .container .check-boxes .boxes .check-boxes-and-text input {
-  width: 16px;
-  height: 16px;
-  margin-right: 3px;
-}
-.newsletter .container .newsletter-bar {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  column-gap: 20px;
-}
-.newsletter .container .newsletter-bar .input-icon-wrapper {
-  position: relative;
-  display: flex;
+  flex-direction: column;
   align-items: center;
 }
-.newsletter .container .newsletter-bar .input-icon-wrapper .fa-envelope {
-  position: absolute;
-  left: 30px;
-}
-.newsletter .container .newsletter-bar .input-icon-wrapper .text {
-  padding: 10px 25px;
-  width: 830px;
-  margin-left: 20px;
-  border-radius: 5px;
-  border: 1px solid #B4B7C9;
-}
-.newsletter .container .newsletter-bar .btn-theme {
-  padding: 10px 25px;
-}
-.newsletter .container .tos {
+#newsletter .subscribe .container .title {
   display: flex;
   justify-content: left;
+  margin-bottom: 30px;
+  width: 100%;
+}
+#newsletter .subscribe .container .title img {
+  margin-left: 15px;
+}
+#newsletter .subscribe .container .newsletter-form {
+  width: 100%;
+}
+#newsletter .subscribe .container .newsletter-form .alternative {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+#newsletter .subscribe .container .newsletter-form .alternative h4 {
+  display: inline-block;
+  padding: 0;
+  margin-bottom: 48px;
+}
+#newsletter .subscribe .container .newsletter-form .alternative .options {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  margin-bottom: 40px;
+}
+#newsletter .subscribe .container .newsletter-form .alternative .options .checkbox-group {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  margin-left: 40px;
+}
+#newsletter .subscribe .container .newsletter-form .alternative .options .checkbox-group .input-group {
+  margin-left: 10px;
+}
+#newsletter .subscribe .container .newsletter-form .alternative .options .checkbox-group .input-group label {
+  margin-left: 5px;
+}
+#newsletter .subscribe .container .newsletter-form .form-email {
+  display: flex;
+}
+#newsletter .subscribe .container .newsletter-form .form-email .input-group {
+  flex-grow: 1;
+  position: relative;
+}
+#newsletter .subscribe .container .newsletter-form .form-email .input-group i.fa-envelope {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+#newsletter .subscribe .container .newsletter-form .form-email .input-group input {
+  width: 98%;
+  padding-left: 35px;
+  padding-right: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#newsletter .subscribe .container .newsletter-form .form-email .btn-theme {
+  margin-right: 80px;
+  padding: 10px 50px;
+}
+#newsletter .subscribe .container .newsletter-form .status-message {
   margin-top: 10px;
-  margin-left: 175px;
-  column-gap: 4px;
 }
 
 .signup {
