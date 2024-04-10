@@ -4,7 +4,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-
+            margin-top: 50px;
+            margin-bottom: 20px;
 
             h1 {
             }
@@ -18,7 +19,7 @@
                     background-color: $white;
                     color: $gray-700;
                     border-radius: 10px;
-                    box-sizing: border-box; 
+                    box-sizing: border-box;
                     border: 1px solid $gray-400;
                     padding: 0 130px 0 10px;
                 }

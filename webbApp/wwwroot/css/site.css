@@ -471,6 +471,20 @@ header .container .account-buttons {
     display: flex;
   }
 }
+header .container .account-buttons .profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block;
+}
+header .container .account-buttons .profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -10;
+}
 header .container .btn-mobile {
   grid-area: mobile;
   display: block;
@@ -944,11 +958,35 @@ footer .container .social-media {
   width: 280px;
   text-align: center;
 }
-.container #account-details aside .profile-info img {
-  width: 200px;
-  height: auto;
+.container #account-details aside .profile-info .profile {
+  position: relative;
+}
+.container #account-details aside .profile-info .profile .image {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
   margin-top: 40px;
   margin-bottom: 15px;
+  display: inline-block;
+}
+.container #account-details aside .profile-info .profile .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -10;
+}
+.container #account-details aside .profile-info .profile label {
+  position: absolute;
+  top: 70%;
+  left: 60%;
+  z-index: 10;
+  padding: 10px 15px 10px 15px;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  border: 1px solid #E2E5F1;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
 }
 .container #account-details aside nav {
   display: flex;
@@ -1043,6 +1081,8 @@ footer .container .social-media {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
 .courses .container .courses-header #form-filters {
   display: flex;
