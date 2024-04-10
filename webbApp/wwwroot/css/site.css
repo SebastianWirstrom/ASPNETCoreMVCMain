@@ -1194,3 +1194,28 @@ footer .container .social-media {
   margin-left: 10px;
   margin-right: 10px;
 }
+.courses .container .skills {
+  background-color: #F3F6FF;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  padding: 70px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.courses .container .skills .skills-text {
+  padding: 40px 80px 40px 40px;
+}
+.courses .container .skills .skills-text p {
+  font-size: 20px;
+}
+.courses .container .skills .skills-text .skills-title {
+  display: flex;
+}
+.courses .container .skills .skills-text .skills-title .h1-theme {
+  color: #6366F1;
+}
+.courses .container .skills .skills-text a {
+  display: inline-block;
+  margin-top: 30px;
+}
