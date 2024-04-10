@@ -1,32 +1,148 @@
 .courses {
     .container {
-        h1 {
+        .courses-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
 
+
+            h1 {
+            }
+
+            #form-filters {
+                display: flex;
+                justify-content: flex-end;
+                column-gap: 30px;
+
+                select {
+                    background-color: $white;
+                    color: $gray-700;
+                    border-radius: 10px;
+                    box-sizing: border-box; 
+                    border: 1px solid $gray-400;
+                    padding: 0 130px 0 10px;
+                }
+            }
+
+            .input-search-group {
+                position: relative;
+                display: flex;
+                align-items: center;
+
+                input {
+                    width: 100%;
+                    padding-right: 40px;
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                }
+
+                i {
+                    position: absolute;
+                    top: 50%;
+                    right: 10px;
+                    transform: translateY(-50%);
+                }
+            }
         }
 
-        #form-filters {
-
-        }
-
-        .input-search-group {
-
-        }
-        
         .course-items {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             grid-template-rows: 1fr 1fr 1fr;
+            column-gap: 20px;
+            row-gap: 50px;
 
-            .content {
-                .title {
-                    color: $gray-900;
+
+            .course {
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                border-radius: 10px;
+                position: relative;
+
+                &:hover {
+                    text-decoration: none;
+                    background-color: $gray-200;
                 }
-                .author {
-                    color: $gray-900;
+
+                .bestseller {
+                    position: absolute;
+                    top: 15px;
+                    left: 15px;
+                    background-color: $success;
+                    color: $white;
+                    display: inline-block;
+                    padding: 0 10px 0 10px;
+                    border-radius: 4px;
                 }
-                .pricing {
-                    .discount {
-                        color: $danger;
+
+                #bookmark {
+                    background-color: $white;
+                    padding: 3px 9px 3px 9px;
+                    border-radius: 25px;
+                    position: absolute;
+                    top: 15px;
+                    right: 15px;
+                    z-index: 10;
+
+                    &:hover {
+                        background-color: $warning;
+                    }
+                }
+
+                img {
+                    width: 100%;
+                    border-top-left-radius: 10px;
+                    border-top-right-radius: 10px;
+                }
+
+                .content {
+                    padding-left: 10px;
+
+
+                    .title {
+                        padding-right: 60px;
+                        color: $gray-900;
+                        margin: 10px 0 10px 10px;
+                    }
+
+                    .author {
+                        color: $gray-900;
+                        margin: 5px 0 10px 10px;
+                    }
+
+                    .pricing {
+                        display: flex;
+                        margin: 5px 0 10px 10px;
+
+                        .discount {
+                            color: $danger;
+                            margin-right: 10px;
+                        }
+
+                        .price {
+                            &.discount-enabled {
+                                text-decoration: line-through;
+                                color: $gray-600;
+                            }
+                        }
+                    }
+
+                    hr {
+                        margin-left: 10px;
+                        width: 92%;
+                    }
+
+                    .course-footer {
+                        display: flex;
+                        color: $gray-600;
+                        margin-bottom: 20px;
+
+                        .hours {
+                            margin-left: 10px;
+                            margin-right: 10px;
+                        }
+
+                        .likes {
+                        }
                     }
                 }
             }
