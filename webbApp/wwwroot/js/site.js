@@ -1,9 +1,5 @@
 ﻿document.addEventListener('DOMContentLoaded', function () {
-
-
     handleProfileImageUpload()
-
-
 })
 
 function handleProfileImageUpload() {

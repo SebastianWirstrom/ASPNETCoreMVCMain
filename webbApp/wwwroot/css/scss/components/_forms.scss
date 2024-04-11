@@ -43,4 +43,8 @@ form {
         font-weight: 500 !important;
         padding: 2px 5px;
     }
+
+    .input-validation-error {
+        border: 1px solid $danger;
+    }
 }

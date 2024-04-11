@@ -410,6 +410,9 @@ form .field-validation-error {
   font-weight: 500 !important;
   padding: 2px 5px;
 }
+form .input-validation-error {
+  border: 1px solid #EF4444;
+}
 
 .alert {
   background: #F5D7DA;

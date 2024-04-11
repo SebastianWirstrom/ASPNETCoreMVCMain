@@ -42,7 +42,7 @@
                 <div id="confirm" class="input-group">
                     <label asp-for="ConfirmPassword"></label>
                     <input asp-for="ConfirmPassword" />
-                    <span asp-validation-for="ConfirmPassword"></span>
+                    <span asp-validation-for="ConfirmPassword" hidden></span>
                 </div>
                 <div id="terms" class="checkbox-group">
                     <div class="input-group">
@@ -58,3 +58,5 @@
         </form>
     </div>
 </section>
+
+@await Html.PartialAsync("_ValidationScriptPartial")
