@@ -381,6 +381,26 @@ form {
 form .input-group {
   display: grid;
 }
+form label[for=Email] {
+  font-weight: 600;
+  color: #0B0F19;
+}
+form label[for=Password] {
+  font-weight: 600;
+  color: #0B0F19;
+}
+form label[for=FirstName] {
+  font-weight: 600;
+  color: #0B0F19;
+}
+form label[for=LastName] {
+  font-weight: 600;
+  color: #0B0F19;
+}
+form label[for=ConfirmPassword] {
+  font-weight: 600;
+  color: #0B0F19;
+}
 form .checkbox-group input[type=checkbox] {
   margin-right: 10px;
 }
@@ -403,17 +423,6 @@ form input[type=checkbox] {
 }
 form .btn-theme-s {
   width: 100%;
-}
-form .field-validation-error {
-  position: absolute;
-  top: 100px;
-  font-size: 14px;
-  color: #EF4444;
-  font-weight: 500 !important;
-  padding: 2px 5px;
-}
-form [data-valmsg-for=TermsAndConditions] {
-  top: 45px;
 }
 form .input-validation-error {
   border: 1px solid #EF4444;
@@ -504,7 +513,7 @@ header .container .btn-mobile {
 }
 
 footer {
-  padding: 50px 0 30px 0;
+  padding: 50px 440px 30px 440px;
   line-height: 160%;
   font-weight: 400;
   color: #565973;
@@ -870,6 +879,17 @@ footer .container .social-media {
 .signup .container form #btn-submit {
   grid-area: submit;
 }
+.signup .field-validation-error {
+  position: absolute;
+  top: 100px;
+  font-size: 14px;
+  color: #EF4444;
+  font-weight: 500 !important;
+  padding: 2px 5px;
+}
+.signup [data-valmsg-for=TermsAndConditions] {
+  top: 45px;
+}
 
 @media (min-width: 992px) {
   .signup {
@@ -899,14 +919,17 @@ footer .container .social-media {
 .signin {
   margin-top: 40px;
 }
-.signin .container {
-  width: 95%;
+.signin .container form {
+  width: 80%;
 }
 .signin .container form .form-content {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas: "email" "password" "remember" "submit";
   gap: 20px;
+}
+.signin .container form .input-group {
+  margin-bottom: 20px;
 }
 .signin .container form .input-group label {
   padding: 3px;
@@ -923,17 +946,37 @@ footer .container .social-media {
 }
 .signin .container form #rememberMe {
   grid-area: remember;
+  margin: 0;
+  padding: 0;
 }
 .signin .container form #btn-submit {
   grid-area: submit;
 }
+.signin .field-validation-error {
+  position: absolute;
+  top: 85px;
+  font-size: 14px;
+  color: #EF4444;
+  font-weight: 500 !important;
+  padding: 2px 5px;
+}
+.signin [data-valmsg-for=TermsAndConditions] {
+  top: 45px;
+}
 
 @media (min-width: 992px) {
   .signin {
-    margin-top: 40px;
+    margin-top: 80px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .signin .container {
-    width: 40%;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .signin .container form .input-group label {
     padding: 3px;

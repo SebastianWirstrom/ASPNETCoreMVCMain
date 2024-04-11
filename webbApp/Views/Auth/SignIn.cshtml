@@ -15,27 +15,27 @@
         }
 
         <form method="post" asp-action="SignIn" asp-controller="Auth" asp-route-ReturnUrl="@ViewData["ReturnUrl"]" novalidate>
-            <h1>Sign in to your account</h1>
+            <h1>Welcome Back</h1>
             <p>Don't have an account? <a asp-action="SignUp" asp-controller="Auth">Sign up here.</a></p>
 
             <div class="form-content">
                 
                 <div id="email" class="input-group">
+                    <span asp-validation-for="Email"></span>
                     <label asp-for="Email"></label>
                     <input asp-for="Email" />
-                    
                 </div>
                 <div id="password" class="input-group">
+                    <span asp-validation-for="Password"></span>
                     <label asp-for="Password"></label>
                     <input asp-for="Password" />
-                    
                 </div>
                 
                 <div id="rememberMe" class="checkbox-group">
                     <div class="input-group">
                         <input asp-for="RememberMe" />
                         <label asp-for="RememberMe">
-                            Keep me signed in.
+                            Remember me
                         </label>
                     </div>
                 </div>
@@ -44,3 +44,5 @@
         </form>
     </div>
 </section>
+
+@await Html.PartialAsync("_ValidationScriptPartial")

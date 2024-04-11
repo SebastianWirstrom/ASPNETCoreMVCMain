@@ -2,9 +2,12 @@
     margin-top: 40px;
 
     .container {
-        width: 95%;
+
 
         form {
+            width: 80%;
+           
+
             .form-content {
                 display: grid;
                 grid-template-columns: 1fr;
@@ -13,6 +16,8 @@
             }
 
             .input-group {
+                margin-bottom: 20px;
+
                 label {
                     padding: 3px;
                 }
@@ -31,9 +36,11 @@
                 grid-area: password;
             }
 
-            
+
             #rememberMe {
                 grid-area: remember;
+                margin: 0;
+                padding: 0;
             }
 
             #btn-submit {
@@ -41,16 +48,36 @@
             }
         }
     }
+
+    .field-validation-error {
+        position: absolute;
+        top: 85px;
+        font-size: 14px;
+        color: $danger;
+        font-weight: 500 !important;
+        padding: 2px 5px;
+    }
+
+    [data-valmsg-for="TermsAndConditions"] {
+        top: 45px;
+    }
 }
 
 @media (min-width: 992px) {
     .signin {
-        margin-top: 40px;
+        margin-top: 80px;
+        margin-bottom: 100px;
+        display: flex;
+        justify-content: center; // Horizontally center the child
+        align-items: center;
 
         .container {
-            width: 40%;
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-            form {              
+            form {
                 .input-group {
                     label {
                         padding: 3px;
