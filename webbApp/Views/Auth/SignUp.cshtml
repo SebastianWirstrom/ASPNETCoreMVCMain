@@ -35,14 +35,16 @@
                     <span asp-validation-for="Email"></span>
                 </div>
                 <div id="password" class="input-group">
+                    <span asp-validation-for="Password"></span>
                     <label asp-for="Password"></label>
                     <input asp-for="Password" />
-                    <span asp-validation-for="Password"></span>
+                    
                 </div>
                 <div id="confirm" class="input-group">
+                    <span asp-validation-for="ConfirmPassword"></span>
                     <label asp-for="ConfirmPassword"></label>
                     <input asp-for="ConfirmPassword" />
-                    <span asp-validation-for="ConfirmPassword" hidden></span>
+                    
                 </div>
                 <div id="terms" class="checkbox-group">
                     <div class="input-group">
@@ -50,8 +52,8 @@
                         <label asp-for="TermsAndConditions">
                             I accept the <a asp-action="TermsAndConditions" asp-controller="About">terms & conditions</a>.
                         </label>
+                        <span asp-validation-for="TermsAndConditions"></span>
                     </div>
-                    <span asp-validation-for="TermsAndConditions"></span>
                 </div>
                 <button id="btn-submit" class="btn-theme-s" type="submit">Sign Up</button>
             </div>

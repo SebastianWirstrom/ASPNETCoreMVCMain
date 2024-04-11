@@ -29,11 +29,12 @@ const compareValidator = (value, compareWithValue) => {
     return false
 }
 
-const checkedValidator = (element) => {
+const checkedValidator = (element) => {   
     if (element.checked) {
         return true
     }
-    return false
+    return false    
+    
 }
 
 const textValidator = (e) => {
@@ -67,7 +68,7 @@ inputs.forEach(input => {
     if (input.dataset.val === 'true') {
         if (input.type === 'checkbox') {
             input.addEventListener('change', (e) => {
-                checkboxValidator(e.target)
+                checkboxValidator(e)
             })
         }
         else {

@@ -51,7 +51,7 @@
                 grid-area: submit;
             }
         }
-    }
+    } 
 }
 
 @media (min-width: 992px) {
@@ -71,12 +71,18 @@
                 .input-group {
                     label {
                         padding: 3px;
+                        margin-top: 15px;
                     }
                 }
 
                 .checkbox-group {
                     margin-top: 30px;
                     margin-bottom: 40px;
+                }
+
+                #terms .input-group label {
+                    margin-bottom: 20px; // Your desired margin
+                    margin-top: 22px; // Maintain the existing top margin if needed
                 }
             }
         }
