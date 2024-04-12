@@ -6,9 +6,9 @@ public class SubscribeViewModel
 {
     public int Id { get; set; }
 
-    [Required]
-    [EmailAddress]
-    [Display(Name = "Email address", Prompt = "Your E-mail")]
+    [DataType(DataType.EmailAddress)]
+    [Display(Name = "E-mail", Prompt = "Enter your E-mail")]
+    [Required(ErrorMessage = "E-mail is required")]
     public string Email { get; set; } = null!;
 
     public bool DailyNewsletter { get; set; }

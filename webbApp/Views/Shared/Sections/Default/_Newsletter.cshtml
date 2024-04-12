@@ -6,7 +6,7 @@
             <h1>Don't Want to Miss Anything?</h1>
             <img src="~/images/newsletter/newsletter-arrow.svg" alt="swirl arrow" />
         </div>
-        <form class="newsletter-form" method="post" asp-action="Subscribe" asp-controller="Default">
+        <form class="newsletter-form" method="post" asp-action="Subscribe" asp-controller="Default" novalidate>
             <div class="alternative">
                 <h4>Sign up for<br /> newsletters</h4>
                 <div class="options">
@@ -59,11 +59,27 @@
             
             @if (!string.IsNullOrEmpty(TempData["StatusMessage"]?.ToString()))
             {
-                <span class="status-message">@TempData["StatusMessage"]</span>
+                var message = TempData["StatusMessage"]!.ToString();
+                var cssClass = "status-message";
+
+                if (message!.Contains("newsletter"))
+                {
+                    cssClass = "status-message-success"; 
+                }
+                else if (message!.Contains("Invalid"))
+                {
+                    cssClass = "status-message-error"; 
+                }
+                else
+                {
+                    cssClass = "status-message-conflict";
+                }
+
+                <span asp-validation-for="Email" class="@cssClass">@message</span>
             }
             else
             {
-                <span class="status-message">* Yes, I agree to the terms and privacy policy</span>
+                <span asp-validation-for="Email" class="status-message">* Yes, I agree to the terms and privacy policy</span>
             }
         </form>
         <div class="unsubscribe-default">
@@ -71,3 +87,5 @@
         </div>
     </div>
 </section>
+
+@await Html.PartialAsync("_ValidationScriptPartial")

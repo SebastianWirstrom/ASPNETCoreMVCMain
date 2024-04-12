@@ -1,3 +1,5 @@
+console.log("Validation script loaded")
+
 const formErrorHandler = (e, validationResult) => {
     let spanElement = document.querySelector(`[data-valmsg-for="${e.target.name}"]`)
 
@@ -34,7 +36,6 @@ const checkedValidator = (element) => {
         return true
     }
     return false    
-    
 }
 
 const textValidator = (e) => {
@@ -42,7 +43,8 @@ const textValidator = (e) => {
 }
 
 const emailValidator = (e) => {
-    const regEx = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]{2}$/
+    console.log("Inne email")
+    const regEx = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
     formErrorHandler(e, regEx.test(e.target.value))
 }
 
@@ -90,4 +92,27 @@ inputs.forEach(input => {
         }
     }
 })
+
+forms.forEach(form => {
+    form.addEventListener('submit', function (e) {
+        e.preventDefault(); 
+        let isValid = true;
+
+        
+        inputs.forEach(input => {
+            input.dispatchEvent(new Event('keyup'));
+            if (input.classList.contains('input-validator-error')) {
+                isValid = false;
+            }
+        });
+
+        
+        if (isValid) {
+            this.submit();
+            console.log('submit');
+        } else {
+            console.log('Fel format, ej submit');
+        }
+    });
+});
 

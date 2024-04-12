@@ -93,6 +93,22 @@
                 .status-message {
                     margin-top: 10px;
                 }
+
+                .status-message-success {
+                    color: $success;
+                }
+
+                .status-message-error {
+                    color: $danger;
+                }
+
+                .status-message-conflict {
+                    color: $warning;
+                }
+
+                .field-validation-error {
+                    color: $danger;
+                }
             }
         }
     }

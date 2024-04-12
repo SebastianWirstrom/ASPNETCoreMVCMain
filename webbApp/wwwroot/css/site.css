@@ -857,6 +857,18 @@ footer .container .social-media {
 #newsletter .subscribe .container .newsletter-form .status-message {
   margin-top: 10px;
 }
+#newsletter .subscribe .container .newsletter-form .status-message-success {
+  color: #22C55E;
+}
+#newsletter .subscribe .container .newsletter-form .status-message-error {
+  color: #EF4444;
+}
+#newsletter .subscribe .container .newsletter-form .status-message-conflict {
+  color: #FFBA08;
+}
+#newsletter .subscribe .container .newsletter-form .field-validation-error {
+  color: #EF4444;
+}
 
 .signup {
   margin-top: 40px;
