@@ -22,6 +22,19 @@
     } 
 }
 
+.btn-theme-danger {
+    @include button;
+    background: $warning;
+    color: $white;
+    border: none;
+
+    &:hover {
+        text-decoration: none;
+        background: $danger;
+        color: $white;
+    }
+}
+
 .btn-theme-s {
     @include button;
     @include theme-shadow;

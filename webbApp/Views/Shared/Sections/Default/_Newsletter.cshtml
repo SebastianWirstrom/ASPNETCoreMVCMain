@@ -56,6 +56,7 @@
                 </div>
                 <button type="submit" class="btn-theme">Subscribe*</button>
             </div>
+            
             @if (!string.IsNullOrEmpty(TempData["StatusMessage"]?.ToString()))
             {
                 <span class="status-message">@TempData["StatusMessage"]</span>
@@ -65,5 +66,8 @@
                 <span class="status-message">* Yes, I agree to the terms and privacy policy</span>
             }
         </form>
+        <div class="unsubscribe-default">
+            Unsubscribe? Click <a asp-action="Unsubscribe" asp-controller="Default">here</a>.
+        </div>
     </div>
 </section>

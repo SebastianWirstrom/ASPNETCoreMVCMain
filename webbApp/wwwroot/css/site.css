@@ -230,6 +230,25 @@ a:hover {
   color: #FFFFFF;
 }
 
+.btn-theme-danger {
+  border-radius: 6px;
+  text-align: center;
+  font-size: 14px;
+  padding: 8px 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  background: #FFBA08;
+  color: #FFFFFF;
+  border: none;
+}
+.btn-theme-danger:hover {
+  text-decoration: none;
+  background: #EF4444;
+  color: #FFFFFF;
+}
+
 .btn-theme-s {
   border-radius: 6px;
   text-align: center;
@@ -1274,4 +1293,30 @@ footer .container .social-media {
 .courses .container .skills .skills-text a {
   display: inline-block;
   margin-top: 30px;
+}
+
+.unsubscribe {
+  margin-top: 100px;
+}
+.unsubscribe .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
+  flex-direction: column;
+}
+.unsubscribe .container .content form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.unsubscribe .container .content form .input-group {
+  width: 40%;
+}
+.unsubscribe .container .content form .btn-theme-danger {
+  height: 57px;
+  margin-top: 25px;
+}
+.unsubscribe .container .return {
+  margin-top: 50px;
 }

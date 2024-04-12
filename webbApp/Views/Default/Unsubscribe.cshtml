@@ -1,0 +1,30 @@
+﻿@model UnsubscribeViewModel
+
+@{
+    ViewData["Title"] = "Unsubscribe";
+}
+
+<section class="unsubscribe">
+    <div class="container">
+        <div class="content">
+            <div class="title">
+                <h2>Please enter the E-mail you wish to unsubscribe</h2>
+            </div>
+            <form method="post" asp-action="Unsubscribe" asp-controller="Default" novalidate>
+                <div class="input-group">
+                    <label asp-for="Email"></label>
+                    <input asp-for="Email" />
+                    <span asp-validation-for="Email"></span>
+                </div>
+                <button class="btn-theme-danger" type="submit">Unsubscribe</button>
+                @TempData["StatusMessage"]
+            </form>
+        </div>
+        <div class="return">
+            <h4>Return to Home?</h4>
+            <button class="btn-theme" type="submit" asp-action="Home" asp-controller="Default">Click here</button>
+        </div>
+    </div>
+
+    
+</section>

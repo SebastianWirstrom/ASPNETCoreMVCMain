@@ -59,4 +59,40 @@ public class DefaultController(HttpClient httpClient) : Controller
         return RedirectToAction("Home", "Default", "subscribe");
     }
 
+    
+    [HttpPost]
+    [Route("/unsubscribe")]
+    public async Task<IActionResult> Unsubscribe(UnsubscribeViewModel model)
+    {
+        if (ModelState.IsValid)
+        {
+            
+            var response = await _httpClient.DeleteAsync($"https://localhost:7238/api/subscribers/{model.Email}");
+            if (response.IsSuccessStatusCode)
+            {
+                TempData["StatusMessage"] = "You have been unsubscribed from the newsletter.";
+            }
+            else if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                TempData["StatusMessage"] = "This E-mail is not subscribed.";
+            }
+            else
+            {
+                TempData["StatusMessage"] = "There was an error processing your request. Please try again later.";
+            }
+        }
+        else
+        {
+            TempData["StatusMessage"] = "Invalid E-mail address";
+        }
+        return RedirectToAction("Unsubscribe", "Default");
+    }
+
+    [HttpGet]
+    [Route("/unsubscribe")]
+    public IActionResult Unsubscribe()
+    {
+        var viewModel = new UnsubscribeViewModel();
+        return View(viewModel);
+    }
 }
