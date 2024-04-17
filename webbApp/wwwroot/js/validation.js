@@ -1,4 +1,4 @@
-console.log("Validation script loaded")
+console.log("Validation.js laddad")
 
 const formErrorHandler = (e, validationResult) => {
     let spanElement = document.querySelector(`[data-valmsg-for="${e.target.name}"]`)
@@ -18,6 +18,7 @@ const formErrorHandler = (e, validationResult) => {
 }
 
 const lengthValidator = (value, minLength = 2) => {
+    console.log("Inne length")
     if (value.length >= minLength) {
         return true
     }
@@ -25,6 +26,7 @@ const lengthValidator = (value, minLength = 2) => {
 }
 
 const compareValidator = (value, compareWithValue) => {
+    console.log("Inne compare")
     if (value === compareWithValue) {
         return true
     }
@@ -32,6 +34,7 @@ const compareValidator = (value, compareWithValue) => {
 }
 
 const checkedValidator = (element) => {   
+    console.log("Inne checked")
     if (element.checked) {
         return true
     }
@@ -39,6 +42,7 @@ const checkedValidator = (element) => {
 }
 
 const textValidator = (e) => {
+    console.log("Inne text")
     formErrorHandler(e, lengthValidator(e.target.value))
 }
 
@@ -49,6 +53,7 @@ const emailValidator = (e) => {
 }
 
 const passwordValidator = (e) => {
+    console.log("Inne password")
     if (e.target.dataset.valEqualtoOther !== undefined) {       
         let referenceFieldName = e.target.dataset.valEqualtoOther.replace('*.', '')      
         let referencedFieldValue = document.querySelector(`input[name="${referenceFieldName}"]`).value
@@ -60,6 +65,7 @@ const passwordValidator = (e) => {
 }
 
 const checkboxValidator = (e) => {
+    console.log("Inne checkbox")
     formErrorHandler(e, checkedValidator(e.target))
 }
 

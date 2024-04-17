@@ -43,7 +43,8 @@ public class AuthController(UserManager<UserEntity> userManager, SignInManager<U
                 FirstName = model.FirstName,
                 LastName = model.LastName,
                 Email = model.Email,
-                UserName = model.Email
+                UserName = model.Email,
+                ProfileImageUrl = "Default-profile-img.jpg"
             };
             var result = await _userManager.CreateAsync(userEntity, model.Password);
             if (result.Succeeded)
