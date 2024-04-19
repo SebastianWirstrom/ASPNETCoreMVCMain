@@ -42,7 +42,6 @@
                         top: 70%;
                         left: 60%;
                         z-index: 10;
-
                         padding: 10px 15px 10px 15px;
                         background-color: $white;
                         border-radius: 50%;
@@ -106,23 +105,33 @@
 
                     #form-firstname {
                         grid-area: first;
+                        font-weight: 600;
+                        color: $gray-900;
                     }
 
                     #form-lastname {
                         grid-area: last;
+                        font-weight: 600;
+                        color: $gray-900;
                     }
 
                     #form-email {
                         grid-area: email;
+                        font-weight: 600;
+                        color: $gray-900;
                     }
 
                     #form-phone {
                         grid-area: phone;
+                        font-weight: 600;
+                        color: $gray-900;
                     }
 
                     #form-bio {
                         margin-top: 0;
                         grid-area: bio;
+                        font-weight: 600;
+                        color: $gray-900;
                     }
 
                     .form-buttons {
@@ -143,18 +152,26 @@
 
                     #form-addressline-1 {
                         grid-area: line1;
+                        font-weight: 600;
+                        color: $gray-900;
                     }
 
                     #form-addressline-2 {
                         grid-area: line2;
+                        font-weight: 600;
+                        color: $gray-900;
                     }
 
                     #form-postal-code {
                         grid-area: postal;
+                        font-weight: 600;
+                        color: $gray-900;
                     }
 
                     #form-city {
                         grid-area: city;
+                        font-weight: 600;
+                        color: $gray-900;
                     }
 
                     .form-buttons {
