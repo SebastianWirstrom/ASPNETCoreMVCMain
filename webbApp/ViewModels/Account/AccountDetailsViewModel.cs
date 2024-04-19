@@ -5,7 +5,7 @@ namespace webbApp.ViewModels.Account;
 
 public class AccountDetailsViewModel
 {
-    public ProfileInfoViewModel? ProfileInfo { get; set; } 
-    public AccountDetailsBasicInfoViewModel? BasicInfo { get; set; } 
-    public AccountDetailsAddressInfoViewModel? AddressInfo { get; set; } 
+    public ProfileInfoViewModel ProfileInfo { get; set; } = null!;
+    public AccountDetailsBasicInfoViewModel BasicInfo { get; set; } = null!;
+    public AccountDetailsAddressInfoViewModel AddressInfo { get; set; } = null!;
 }

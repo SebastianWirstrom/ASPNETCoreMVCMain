@@ -14,7 +14,7 @@ function handleProfileImageUpload() {
             })
         }
     }
-    catch {
-
+    catch (error) {
+        console.error('Error in handleProfileImageUpload:', error);
     }
 }

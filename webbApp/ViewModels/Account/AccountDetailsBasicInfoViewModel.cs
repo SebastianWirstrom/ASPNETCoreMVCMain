@@ -19,7 +19,6 @@ namespace webbApp.ViewModels.Account
         [DataType(DataType.EmailAddress)]
         [Display(Name = "Email address", Prompt = "Enter your Email address", Order = 2)]
         [Required(ErrorMessage = "E-mail address is required")]
-        [RegularExpression("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$", ErrorMessage = "Invalid email address. Must be in format name@domain.com")]
         public string Email { get; set; } = null!;
 
         [DataType(DataType.PhoneNumber)]

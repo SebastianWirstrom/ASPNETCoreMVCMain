@@ -2,7 +2,7 @@
 @{
     ViewData["Title"] = "Create Account";
 }
-
+@await Html.PartialAsync("_ValidationScriptPartial")
 <section class="signup">
     <div class="container">
 
@@ -61,4 +61,4 @@
     </div>
 </section>
 
-@await Html.PartialAsync("_ValidationScriptPartial")
+

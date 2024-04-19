@@ -82,6 +82,15 @@
             justify-content: center;
             align-items: center;
 
+            .field-validation-error {
+                position: absolute;
+                top: 85px;
+                font-size: 14px;
+                color: $danger;
+                font-weight: 500 !important;
+                padding: 2px 5px;
+            }
+
             .basic-info-form {
                 .content {
                     display: grid;

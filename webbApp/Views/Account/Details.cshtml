@@ -36,7 +36,6 @@
                 </div>
             }
             
-
             <nav class="account-nav">
                 <a class="btn-theme-s" asp-controller="Account" asp-action="Details"><i class="fa-regular fa-cog"></i>Account Details</a>
                 <a class="btn-transparent" asp-controller="Auth" asp-action="SignOut"><i class="fa-light fa-lock"></i>Security</a>
@@ -56,22 +55,23 @@
                     <div class="content">
                         <div id="form-firstname" class="input-group">
                             <label asp-for="BasicInfo.FirstName"></label>
-                            <input asp-for="BasicInfo.FirstName" type="text" />
+                            <input asp-for="BasicInfo.FirstName"/>
                             <span asp-validation-for="BasicInfo.FirstName"></span>
                         </div>
+
                         <div id="form-lastname" class="input-group">
                             <label asp-for="BasicInfo.LastName"></label>
-                            <input asp-for="BasicInfo.LastName" type="text" />
+                            <input asp-for="BasicInfo.LastName"/>
                             <span asp-validation-for="BasicInfo.LastName"></span>
                         </div>
-                        <div id="form-email" class="input-group">
+                        <div id="form-email" name="email" class="input-group">
                             <label asp-for="BasicInfo.Email"></label>
-                            <input asp-for="BasicInfo.Email" type="text" />
+                            <input asp-for="BasicInfo.Email"/>
                             <span asp-validation-for="BasicInfo.Email"></span>
                         </div>
                         <div id="form-phone" class="input-group">
                             <label asp-for="BasicInfo.Phone"></label>
-                            <input asp-for="BasicInfo.Phone" type="text" />
+                            <input asp-for="BasicInfo.Phone"/>
                             <span asp-validation-for="BasicInfo.Phone"></span>
                         </div>
                         <div id="form-bio" class="input-group">
@@ -94,7 +94,7 @@
                         <div id="form-addressline-1" class="input-group">
                             <label asp-for="AddressInfo.AddressLine_1"></label>
                             <input asp-for="AddressInfo.AddressLine_1" />
-                            <span asp-validation-for="AddressInfo.AddressLine_1"></span>
+                            <span asp-validation-for="AddressInfo!.AddressLine_1"></span>
                         </div>
                         <div id="form-addressline-2" class="input-group">
                             <label asp-for="AddressInfo.AddressLine_2"></label>
@@ -121,3 +121,5 @@
         </div>
     </section>
 </div>
+
+@await Html.PartialAsync("_ValidationScriptPartial")
