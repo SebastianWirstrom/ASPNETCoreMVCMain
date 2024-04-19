@@ -71,54 +71,59 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     let forms = document.querySelectorAll('form')
-    let inputs = forms[0].querySelectorAll('input')
-
-    inputs.forEach(input => {
-        if (input.dataset.val === 'true') {
-            if (input.type === 'checkbox') {
-                input.addEventListener('change', (e) => {
-                    checkboxValidator(e)
-                })
-            }
-            else {
-                input.addEventListener('keyup', (e) => {
-                    switch (e.target.type) {
-                        case 'text':
-                            textValidator(e)
-                            break;
-
-                        case 'email':
-                            emailValidator(e)
-                            break;
-
-                        case 'password':
-                            passwordValidator(e)
-                            break;
-                    }
-                })
-            }
-        }
-    })
 
     forms.forEach(form => {
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
-            let isValid = true;
+        let inputs = form.querySelectorAll('input')
 
-            inputs.forEach(input => {
-                input.dispatchEvent(new Event('keyup'));
-                if (input.classList.contains('input-validator-error')) {
-                    isValid = false;
+        inputs.forEach(input => {
+            if (input.dataset.val === 'true') {
+                if (input.type === 'checkbox') {
+                    input.addEventListener('change', (e) => {
+                        checkboxValidator(e)
+                    })
                 }
-            })
+                else {
+                    input.addEventListener('keyup', (e) => {
+                        switch (e.target.type) {
+                            case 'text':
+                                textValidator(e)
+                                break;
 
+                            case 'email':
+                                emailValidator(e)
+                                break;
 
-            if (isValid) {
-                this.submit();
-                console.log('submit');
-            } else {
-                console.log('Fel format, ej submit');
+                            case 'password':
+                                passwordValidator(e)
+                                break;
+                        }
+                    })
+                }
             }
         })
+
+        forms.forEach(form => {
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                let isValid = true;
+
+                inputs.forEach(input => {
+                    input.dispatchEvent(new Event('keyup'));
+                    if (input.classList.contains('input-validator-error')) {
+                        isValid = false;
+                    }
+                })
+
+                if (isValid) {
+                    this.submit();
+                    console.log('submit');
+                } else {
+                    console.log('Fel format, ej submit');
+                }
+            })
+        })
     })
+    
+
+    
 })
