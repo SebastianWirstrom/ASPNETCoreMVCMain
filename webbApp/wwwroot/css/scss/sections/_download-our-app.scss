@@ -30,6 +30,12 @@
             .store-text {
                 margin-left: 50px;
             }
+            .rating-stars {
+                margin-left: 50px;
+                i{
+                    color: $warning;
+                }
+            }
 
             .store-box {
                 display: flex;
@@ -45,6 +51,7 @@
                 }
                 a {
                     margin-left: 90px;
+                    
                    img {
                         margin-top: 5px;
                         width: 200px;

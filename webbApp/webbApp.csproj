@@ -39,7 +39,6 @@
     <None Include="wwwroot\images\showcase\sc-logo2.svg" />
     <None Include="wwwroot\images\showcase\sc-logo3.svg" />
     <None Include="wwwroot\images\showcase\sc-logo4.svg" />
-    <None Include="wwwroot\images\showcase\showcase-image.svg" />
     <None Include="wwwroot\images\switch-between\mockup.svg" />
     <None Include="wwwroot\images\top-work-tools\tools-icon-dropbox.svg" />
     <None Include="wwwroot\images\top-work-tools\tools-icon-evernote.svg" />

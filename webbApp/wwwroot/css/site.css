@@ -605,6 +605,9 @@ footer .container .social-media {
   margin-top: 140px;
   margin-bottom: 30px;
 }
+.showcase .container .content a {
+  display: inline-block;
+}
 .showcase .container .content .showcase-logos {
   display: flex;
 }
@@ -702,7 +705,11 @@ footer .container .social-media {
   margin-left: 8px;
 }
 .manage-your-work .container .text-box .btn-theme-s {
+  display: inline-block;
   margin-top: 30px;
+}
+.manage-your-work .container .text-box .btn-theme-s i {
+  margin-left: 10px;
 }
 
 .download-our-app {
@@ -736,6 +743,12 @@ footer .container .social-media {
 }
 .download-our-app .container .text-box .store-text {
   margin-left: 50px;
+}
+.download-our-app .container .text-box .rating-stars {
+  margin-left: 50px;
+}
+.download-our-app .container .text-box .rating-stars i {
+  color: #FFBA08;
 }
 .download-our-app .container .text-box .store-box {
   display: flex;
