@@ -963,6 +963,10 @@ footer .container .social-media {
 .signin {
   margin-top: 40px;
 }
+.signin .container {
+  display: inline-flex;
+  flex-direction: column;
+}
 .signin .container form {
   width: 80%;
 }

@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let forms = document.querySelectorAll('form')
 
-    forms.forEach(form => {
+    forms.forEach(form => { 
         let inputs = form.querySelectorAll('input')
 
         inputs.forEach(input => {

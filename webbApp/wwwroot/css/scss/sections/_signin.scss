@@ -2,7 +2,8 @@
     margin-top: 40px;
 
     .container {
-
+        display: inline-flex;
+        flex-direction: column;
 
         form {
             width: 80%;
