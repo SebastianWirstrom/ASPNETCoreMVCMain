@@ -1057,6 +1057,7 @@ footer .container .social-media {
   display: flex;
   flex-direction: row;
   column-gap: 20px;
+  margin-bottom: 50px;
 }
 .container #account-details aside .profile-info {
   width: 280px;
@@ -1112,6 +1113,8 @@ footer .container .social-media {
   border-left: 1px solid #d1d1d1;
 }
 .container #account-details .details {
+  display: flex;
+  flex-direction: column;
   margin-left: 80px;
   width: 60%;
   justify-content: center;
@@ -1125,14 +1128,15 @@ footer .container .social-media {
   font-weight: 500 !important;
   padding: 2px 5px;
 }
+.container #account-details .details .basic-info-form {
+  margin-top: 50px;
+}
 .container #account-details .details .basic-info-form .content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "first last" "email phone" "bio bio";
-  gap: 15px;
-}
-.container #account-details .details .basic-info-form .content .input-group {
-  margin-top: 10px;
+  row-gap: 30px;
+  column-gap: 15px;
 }
 .container #account-details .details .basic-info-form .content .input-group textarea {
   padding: 15px;
@@ -1175,7 +1179,8 @@ footer .container .social-media {
   margin-bottom: 25px;
 }
 .container #account-details .details .address-info-form .content {
-  gap: 15px;
+  row-gap: 30px;
+  column-gap: 15px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "line1 line1" "line2 line2" "postal city";

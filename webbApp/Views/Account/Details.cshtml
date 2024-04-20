@@ -9,12 +9,7 @@
 <div class="container">
     <section id="account-details">
 
-        @if (!string.IsNullOrEmpty(ViewData["ErrorMessage"]?.ToString()))
-        {
-            <div class="alert">
-                @ViewData["ErrorMessage"]
-            </div>
-        }
+        
 
         <aside>
             @if (user != null)
@@ -47,6 +42,12 @@
         <div class="vl"></div>
 
         <div class="details">
+            @if (!string.IsNullOrEmpty(ViewData["ErrorMessage"]?.ToString()))
+            {
+                <div class="alert">
+                    @ViewData["ErrorMessage"]
+                </div>
+            }
             <section class="basic-info">
                 <form class="basic-info-form" method="post" asp-controller="Account" asp-action="Details" novalidate>
                     <h2>Account Details</h2>

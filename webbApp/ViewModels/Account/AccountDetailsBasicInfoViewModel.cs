@@ -9,16 +9,19 @@ namespace webbApp.ViewModels.Account
         [DataType(DataType.Text)]
         [Display(Name = "First name", Prompt = "Enter your first name", Order = 0)]
         [Required(ErrorMessage = "First name is required")]
+        [MinLength(2, ErrorMessage = "First name must be at least 2 characters long")]
         public string FirstName { get; set; } = null!;
 
         [DataType(DataType.Text)]
         [Display(Name = "Last name", Prompt = "Enter your last name", Order = 1)]
         [Required(ErrorMessage = "Last name is required")]
+        [MinLength(2, ErrorMessage = "Last name must be at least 2 characters long")]
         public string LastName { get; set; } = null!;
 
         [DataType(DataType.EmailAddress)]
         [Display(Name = "Email address", Prompt = "Enter your Email address", Order = 2)]
         [Required(ErrorMessage = "E-mail address is required")]
+        [RegularExpression(@"^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,}$", ErrorMessage = "Invalid email format")]
         public string Email { get; set; } = null!;
 
         [DataType(DataType.PhoneNumber)]
