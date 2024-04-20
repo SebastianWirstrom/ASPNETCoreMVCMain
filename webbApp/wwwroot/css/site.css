@@ -842,6 +842,9 @@ footer .container .social-media {
 #newsletter .subscribe .container .newsletter-form .alternative .options .checkbox-group .input-group label {
   margin-left: 5px;
 }
+#newsletter .subscribe .container .newsletter-form .alternative .options .checkbox-group .input-group input {
+  accent-color: #6366F1;
+}
 #newsletter .subscribe .container .newsletter-form .form-email {
   display: flex;
 }
@@ -1369,6 +1372,8 @@ footer .container .social-media {
   display: flex;
   justify-content: center;
   align-items: center;
+  column-gap: 15px;
+  margin-top: 20px;
 }
 .unsubscribe .container .content form .input-group {
   width: 40%;
@@ -1379,4 +1384,7 @@ footer .container .social-media {
 }
 .unsubscribe .container .return {
   margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 80px;
 }
