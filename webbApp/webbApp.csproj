@@ -23,12 +23,6 @@
     <None Include="wwwroot\images\download-our-app\google-play-badge.svg" />
     <None Include="wwwroot\images\download-our-app\phone-bottom.svg" />
     <None Include="wwwroot\images\download-our-app\phone-top.svg" />
-    <None Include="wwwroot\images\features\features-icon-1.svg" />
-    <None Include="wwwroot\images\features\features-icon-2.svg" />
-    <None Include="wwwroot\images\features\features-icon-3.svg" />
-    <None Include="wwwroot\images\features\features-icon-4.svg" />
-    <None Include="wwwroot\images\features\features-icon-5.svg" />
-    <None Include="wwwroot\images\features\features-icon-6.svg" />
     <None Include="wwwroot\images\footer\social-btn-1.svg" />
     <None Include="wwwroot\images\footer\social-btn-2.svg" />
     <None Include="wwwroot\images\footer\social-btn-3.svg" />
